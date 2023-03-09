@@ -1,0 +1,140 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+
+/* 1. CSS 기본 작성 순서
+ * 요소{
+ *      0) z-index
+ *
+ *      1) 사이즈(가로, 세로, 마진, 패딩..)에 대한 내용
+ *      
+ *      2) 정렬(포지션, 플렉스..)에 대한 내용
+ * 
+ *      3) 스타일에 대한 내용
+ * }
+ */
+
+/* 주석 작성 규칙
+ * * 설명  *        - 스타일 그룹의 제목 
+ * ** 설명 *        - 스타일 그룹 안의 각 요소 설명
+ * ** (대상):설명 * - 스크립트 혹은 사용자가 직접 부여하는 클래스,(대상)에게만 사용 가능
+ */
+
+/* 기본값 */
+/** 컬러 변수 */
+:root{
+    --bgColor: #F4F4F4;
+
+    --mainColor: #71A42F;
+    --lightGreen: #9BBC58;
+    --lightBule: #52B2C8;
+    
+    --fontLightColor: #646464;
+    --fontColor: #3C3C3C;
+    --fontWhite: #fff;
+    --fontNonSetect: #fff5;
+}
+/** 전체 기본값 */
+body{
+    width: calc(100vw - 70px);
+    height: calc(100vh - 70px);
+    padding: 35px;
+
+    font-family: 'NanumSquare', sans-serif;
+    background-color: var(--bgColor);
+    overflow: hidden;
+    cursor: default;
+    color: var(--fontColor);
+}
+
+/* 요소가 작성될 화면, 이 밖에는 요소가 위치하지 말것 */
+.wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+/* 화면 정렬 */
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+}
+/** (아티클): 아티클중 나머지 전체 영역을 가짐 */
+.flexFullArea{
+    flex-grow: 1;
+}
+
+/* 애니메이션 속도 */
+.anime{
+    transition: .3s;
+}
+
+/* icon hover 컬러로 바뀔때 BGcolor랑 마스크 삭제 */
+.icon:hover{
+    -webkit-mask-image: none;
+    mask-image: none;
+    background-color: #fff0;
+}
+
+/* hr 스타일 */
+hr{
+    border: 0;
+    border-top: 1px solid #8c8c8c;
+    border-bottom: 1px solid var(--lightColor);
+}
+
+/* 요소 스타일 */
+/** 박스 공통 디자인 */
+.glassmorphism{
+    box-sizing: border-box;
+    background: rgba( 240, 240, 240, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+/** box 안의 패딩 */
+.boxPadding{padding: 12px;}
+/** 화면 정중앙 위치 */
+/*** (box): 박스가 화면 정중앙 위치  */
+.center{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+/*** (요소): 박스 안 요소가 가운데 위치  */
+.flexCenter{
+    align-items: center;
+    justify-content: center;
+}
+
+/* 폰트 스타일 */
+/** (*): 폰트 굵기 */
+.light{ font-weight: 300;}
+.normal{ font-weight: 400;}
+.bold{ font-weight: 700;}
+.bolder{ font-weight: 800;}
+/** (*): 폰트 사이즈 */
+h1, .titleL{font-size: 24pt;}
+h2, .titleM{font-size: 21pt;}
+h3, .titleS{font-size: 18pt;}
+h4, .textL{font-size: 16pt;}
+h5, .textM{font-size: 14pt;}
+p, .textS{font-size: 12pt;}
+address, .textSS{font-size: 10pt;}
+/** (*): 폰트 정렬 */
+.textCenter{text-align: center;}
+.textRight{text-align: right;}
+.textLeft{text-align: left;}
+/** (*): 폰트 색상 */
+.textColorW{color: var(--lightColor);}
+.textColorB{color: var(--fontColor);}
+.textColorD{color: var(--darkColor);}
+.textColorP{color: var(--pointColor);}
+/** (*): 폰트 컬러 고정 */
+.pointer{color: var(--fontColor);}
+/** 폰트 클리어 */
+a{text-decoration: none;}
