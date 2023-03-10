@@ -34,20 +34,31 @@
 }
 /** 전체 기본값 */
 body{
-    width: calc(100vw - 70px);
-    height: calc(100vh - 70px);
-    padding: 35px;
-
     font-family: 'NanumSquare', sans-serif;
-    background-color: var(--bgColor);
-    overflow: hidden;
-    cursor: default;
     color: var(--fontThickColor);
 }
 
-/* 요소가 작성될 화면, 이 밖에는 요소가 위치하지 말것 */
-.wrapper{
-    height: 100%;
+/* 모바일 div 사이즈 */
+.head{
+    width: 100vw;
+    height: 60px;
+}
+.foot{
+    width: 100vw;
+    height: 140px;
+}
+.content{
+    width: 100vw;
+    background-color: var(--bgColor);
+}
+.content .centerWrapper{
+    width: 100%;
+}
+.side{
+    width: 100%;
+    background-color: #fff;
+}
+.side .sideWrapper{
     width: 100%;
 }
 
@@ -67,18 +78,16 @@ body{
 
 /* 애니메이션 속도 */
 .anime{
-    transition: .3s;
+    transition: .2s;
 }
 
 /* 요소 스타일 */
 /** border box  */
 div{box-sizing: border-box;}
-/** box 안의 패딩 */
-.boxPadding{padding: 12px;}
 
 /* 요소 정렬 */
 /** position: 박스가 화면 정중앙 위치  */
-.center{
+.positionCenter{
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;
@@ -115,3 +124,38 @@ address, .textSS{font-size: 10pt;}
 .textNonSelect{color: var(--fontNonSetect);}
 /** 폰트 클리어 */
 a{text-decoration: none;}
+
+/* pc size */
+@media (min-width: 1330px) {
+body{
+    height: 100vh;
+
+    overflow: hidden;
+    cursor: default;
+}
+
+/** pc 사이즈  */
+.content{
+    width: 100vw;
+}
+.content > .centerWrapper{
+    height: 100%;
+    width: 1330px;
+    margin: 0 auto;
+}
+.side{
+    width: 100%; 
+    height: 70px;
+}
+.side > .sideWrapper{
+    height: 100%;
+    width: 1330px;
+    margin: 0 auto;
+}
+.head{
+    height: 90px;
+}
+.foot{
+    height: 110px;
+}
+}
