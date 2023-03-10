@@ -1,4 +1,10 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@font-face {
+    font-family: 'titleFont';
+    src: url(../source/font/PuradakGentleGothic.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 1. CSS 기본 작성 순서
  * 요소{
@@ -78,6 +84,8 @@ div{box-sizing: border-box;}
 }
 
 /* 폰트 스타일 */
+/** 폰트 */
+.tilte{font-family: 'titleFont', sans-serif;}
 /** (*): 폰트 굵기 */
 .light{ font-weight: 300;}
 .normal{ font-weight: 400;}
