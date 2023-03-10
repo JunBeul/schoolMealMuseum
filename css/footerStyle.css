@@ -41,6 +41,7 @@ footer{
 }
 object{
 	width: 200px;
+	margin-bottom: 0;
 }
 .blank{
 	flex-grow: 1;
