@@ -1,0 +1,44 @@
+/* 각 섹션의 기본 할당 크기 */
+/** 가운데 섹션 크기 */
+.contenCenter{
+    min-width: 425px;
+    flex-grow: 1;
+}
+/** 오른쪽 섹션 크기 */
+.contentRight{
+    width: 40vw;
+    min-width: 425px;
+}
+
+/* 특수 공간 */
+/** (아티클): 지도를 볼수있는 빈공간 */
+.hiddenArea{
+    visibility: collapse;
+    flex-grow: 1;
+}
+/** (아티클): 원페이지의 경우 상단 빈공간  */
+.hiddenAreaTop{
+    height: 74px;
+
+    visibility: collapse;
+}
+
+/** (섹션): 섹션을 숨기기 위한 용도 */
+.visibility{
+    visibility: collapse;
+}
+
+/* 기타 스타일 */
+/** 헤더 고정 사이즈 */
+.contentRight header{
+    height: 50px;
+}
+/** 고정 여백 값 */
+section article, header{
+    margin: 12px;
+    padding: 12px;
+}
+/** 아티클의 줄간격 */
+article{
+    line-height: 16pt;
+}

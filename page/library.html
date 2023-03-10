@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Title" content="학교급식 사이버 박물관" />
+  <meta http-equiv="Subject" content="학교급식 사이버 박물관" />
+  <meta http-equiv="Author" content="한국교육환경보호원" />
+  <meta http-equiv="Distribution" content="한국교육환경보호원" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+  <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+
+  <link rel="icon" href="./source/icon/favicon.svg">
+  <link rel="mask-icon" href="./source/icon/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="./source/icon/favicon.svg">
+
+  <!-- 외부 스타일 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../css/publicStyle.css">
+  <link rel="stylesheet" href="../css/layoutStyle.css">
+  <!-- 내부 스타일 -->
+  <link rel="stylesheet" href="../css/library.css">
+
+  <title>템플릿</title>
+</head>
+<body class="flexCol">
+<iframe src="header.html" frameborder="0" class="head"></iframe>
+<!-- 사이드 -->
+<section class="side">
+  <article class="sideWrapper">
+    <header class="library-header">
+      <div class="library-header-title">
+        <h2 class="library-header-title-text">자료실</h2>
+        <svg class="library-header-title__arrow" xmlns="http://www.w3.org/2000/svg" width="20.097" height="10.944" viewBox="0 0 20.097 10.944">
+          <g id="그룹_847" data-name="그룹 847" transform="translate(-381.42 -86.425)">
+            <line id="선_20" data-name="선 20" x1="9.034" y2="8.794" transform="translate(382.466 87.5)" fill="none" stroke="#707070" stroke-width="3"/>
+            <line id="선_21" data-name="선 21" x2="8.966" y2="8.794" transform="translate(391.5 87.5)" fill="none" stroke="#707070" stroke-width="3"/>
+          </g>
+        </svg>
+      </div>
+      <div class="library-header-search">
+        <form action="" method="get">
+          <select name="group" class="library-header-search__select">
+            <option value="title">제목</option>
+            <option value="writer">저자</option>
+          </select>
+          <input type="text" name="search" class="library-header-search__input" />
+          <button type="submit" class="library-header-search__button">검색</button>
+        </form>
+      </div>
+      <div class="library-header-category">
+        <a href="" class="library-header-category__link">카테고리 전체</a>
+      </div>
+    </header>
+  </article>
+</section>
+<!-- 본문 -->
+<section class="content flexFullArea">
+  <div class="centerWrapper">
+    <article class="library-order">
+    </article>
+  </div>
+</section>
+<iframe src="footer.html" frameborder="0" class="foot"></iframe>
+<script src="../js/library.js"></script>
+</body>
+</html>
