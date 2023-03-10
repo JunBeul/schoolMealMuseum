@@ -109,4 +109,4 @@ address, .textSS{font-size: 10pt;}
 .textSelect{color: var(--fontWhite);}
 .textNonSelect{color: var(--fontNonSetect);}
 /** 폰트 클리어 */
-a{text-decoration: none;}
+a{text-decoration: none;color: var(--fontThickColor);}

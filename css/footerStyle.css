@@ -1,0 +1,56 @@
+footer{
+	width: 100vw;
+	
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+object{
+	width: 170px;
+	margin-bottom: 15px;
+}
+.footText{
+	text-align: center;
+	font-size: 14px;
+}
+.link{
+	margin-bottom: 12px;
+	font-size: 12px;
+}
+.link a:nth-child(2){
+	border-left: 2px solid var(--fontLightColor);
+	border-right: 2px solid var(--fontLightColor);
+	padding: 0 9px;
+	margin: 0 5px;
+}
+.footText address{
+	font-size: 9px;
+}
+/* pc size */
+@media (min-width: 1330px) {
+footer{
+	width: 1330px;
+	height: 110px;
+
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+object{
+	width: 200px;
+}
+.blank{
+	flex-grow: 1;
+}
+.footText{
+	text-align: right;
+}
+.footText .link{
+	font-size: 12px;
+}
+.footText address{
+	font-size: 10px;
+}
+}

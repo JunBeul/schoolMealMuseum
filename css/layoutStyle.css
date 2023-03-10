@@ -21,6 +21,12 @@
 .side .sideWrapper{
     width: 100%;
 }
+.head{
+    background-color: var(--mainGreen);
+}
+.foot{
+    background-color: #fff;
+}
 
 /* pc size */
 @media (min-width: 1330px) {
