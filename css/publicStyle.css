@@ -38,35 +38,13 @@ body{
     color: var(--fontThickColor);
 }
 
-/* 모바일 div 사이즈 */
-.head{
-    width: 100vw;
-    height: 60px;
-}
-.foot{
-    width: 100vw;
-    height: 140px;
-}
-.content{
-    width: 100vw;
-    background-color: var(--bgColor);
-}
-.content .centerWrapper{
-    width: 100%;
-}
-.side{
-    width: 100%;
-    background-color: #fff;
-}
-.side .sideWrapper{
-    width: 100%;
-}
-
 /* 화면 정렬 */
+/** 콘텐츠 가로 정렬  */
 .flexRow{
     display: flex;
     flex-direction: row;
 }
+/** 콘텐츠 세로 정렬 */
 .flexCol{
     display: flex;
     flex-direction: column;
@@ -124,38 +102,3 @@ address, .textSS{font-size: 10pt;}
 .textNonSelect{color: var(--fontNonSetect);}
 /** 폰트 클리어 */
 a{text-decoration: none;}
-
-/* pc size */
-@media (min-width: 1330px) {
-body{
-    height: 100vh;
-
-    overflow: hidden;
-    cursor: default;
-}
-
-/** pc 사이즈  */
-.content{
-    width: 100vw;
-}
-.content > .centerWrapper{
-    height: 100%;
-    width: 1330px;
-    margin: 0 auto;
-}
-.side{
-    width: 100%; 
-    height: 70px;
-}
-.side > .sideWrapper{
-    height: 100%;
-    width: 1330px;
-    margin: 0 auto;
-}
-.head{
-    height: 90px;
-}
-.foot{
-    height: 110px;
-}
-}
