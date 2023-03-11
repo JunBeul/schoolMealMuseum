@@ -7,7 +7,7 @@ footer{
 	align-items: center;
 	justify-content: center;
 }
-object{
+img{
 	width: 170px;
 	margin-bottom: 15px;
 }
@@ -39,7 +39,7 @@ footer{
 	display: flex;
 	flex-direction: row;
 }
-object{
+img{
 	width: 200px;
 	margin-bottom: 0;
 }
