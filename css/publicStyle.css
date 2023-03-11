@@ -62,7 +62,7 @@ body{
 
 /* 애니메이션 속도 */
 .anime{
-    transition: .2s;
+    transition: .3s;
 }
 
 /* 요소 스타일 */
@@ -85,7 +85,7 @@ div{box-sizing: border-box;}
 
 /* 폰트 스타일 */
 /** 폰트 */
-.tilte{font-family: 'titleFont', sans-serif;}
+.title{font-family: 'titleFont', sans-serif;text-shadow: 0 0 10px var(--fontThickColor);}
 /** (*): 폰트 굵기 */
 .light{ font-weight: 300;}
 .normal{ font-weight: 400;}
