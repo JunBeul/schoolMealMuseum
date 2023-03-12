@@ -1,3 +1,7 @@
+body{
+  width: 100vw;
+  overflow: hidden;
+}
 .blackBox{
   width: 100vw;
   height: 100vh;
@@ -6,6 +10,7 @@
   left: 0;
   top: 0;
   
+  visibility: hidden;
   background-color: #0007;
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
@@ -19,6 +24,7 @@ header{
 header .headerWrapper{
   width: 100%;
   height: 100%;
+
 	display: flex;
 	align-items: center;
 }
@@ -39,29 +45,42 @@ header .headerWrapper .title{
   width: 30px;
   height: 6px;
   background-color: #fff;
+  border-radius: 1px;
 }
 .menuIcon > div:nth-child(2){
   margin: 6px 0;
 }
-.headerWrapper > ul{
+.closeIcon{
+  transform: rotate(-180deg);
+}
+.closeIcon div:first-child{
+  width: 20px;
+  transform: translate(-1px, 5px) rotate(-45deg);
+}
+.closeIcon div:last-child{
+  width: 20px;
+  transform: translate(-1px, -5px) rotate(45deg);
+}
+header > .headerWrapper > ul{
   width: calc(90vw - 40px);
   height: calc(100vh - 40px);
 
   position: absolute;
-  right: 0;
+  right: -90vw;
   top: 0;
   padding: 20px;
 
+  visibility: hidden;
   background-color: var(--mainGreen);
 }
-.headerWrapper > ul > li{
+header > .headerWrapper > ul > li{
   margin: 20px 0;
 
 }
-.headerWrapper > ul > li:first-child{
+header > .headerWrapper > ul > li:first-child{
   margin-top: 80px;
 }
-.headerWrapper > ul > li > a{
+header > .headerWrapper > ul > li > a{
   display: inline-block;
   width: calc(100%);
   height: 40px;
@@ -72,6 +91,11 @@ header .headerWrapper .title{
   border-radius: 20px;
   border: solid 1px var(--fontWhite);
 }
+header > .headerWrapper > ul > li > a:hover{
+  color: var(--fontThickColor);
+  background-color: #fff5;
+  font-weight: bold;
+}
 header > .headerWrapper > ul > li > a.select{
   background-color: #fff;
   color: var(--mainGreen);
@@ -81,7 +105,7 @@ header > .headerWrapper > ul > li > a.select{
 /* pc size */
 @media (min-width: 1330px) {
 .blackBox{
-  display: none;
+  visibility: hidden;
 }
 header{
   width: 100vw;
@@ -99,12 +123,16 @@ header .headerWrapper .title{
   margin: 0;
 }
 .menuIcon{
-  display: none;
+  visibility: hidden;
 }
 header .headerWrapper ul{
   width: auto;
   height: auto;
+
   padding: 0;
+
+  visibility: visible;
+  display: block;
   text-align: right;
   position: static;
   background: transparent;
@@ -126,6 +154,7 @@ header .headerWrapper ul li a{
 	display: flex;
 	align-items: center;
   justify-content: center;
+  border: none;
   border-radius: 20px;
   font-size: 15px;
   color: var(--fontNonSetect);
