@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="../css/publicStyle.css">
     <link rel="stylesheet" href="../css/layoutStyle.css">
     <!-- 내부 스타일 -->
+    <link rel="stylesheet" href="../css/communityStyle.css">
     <!-- <link rel="stylesheet" href="../css/templateStyle.css"> -->
 
     <title>템플릿</title>
@@ -34,14 +35,29 @@
     <iframe src="header.html" frameborder="0" class="head"></iframe>
     <!-- 사이드 -->
     <section class="side">
-        <div class="sideWrapper">
-            <article>사이드 내용</article>
+        <div class="sideWrapper communitySide ">
+            <span class="normal subHead flexCenter">커뮤니티</span>
+            <button class="offBtn">공지사항</button>
+            <button class="onBtn">문의사항</button>
         </div>
     </section>
     <!-- 본문 -->
     <section class="content flexFullArea">
-        <div class="centerWrapper">
-            <article>본문 내용</article>
+        <div class="centerWrapper flexCol">
+            <div class="searchLine flexCenter">
+                <form>
+                <select name="search" class="selectBox">
+                    <option value="">제목</option>
+                    <option value="">번호</option>
+                    <option value="">작성일</option>
+                </select>
+                <select name="search" class="selectBox">
+                    <option value="">제목</option>
+                    <option value="">번호</option>
+                    <option value="">작성일</option>
+                </select>
+                </form>
+           </div>
         </div>
     </section>
     <iframe src="footer.html" frameborder="0" class="foot"></iframe>

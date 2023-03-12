@@ -1,0 +1,60 @@
+.onBtn {
+    background-color: var(--mainGreen);
+    color:var(--fontWhite);
+    border:  1px solid var(--lineColor);
+    padding: 10px 20px;
+    margin-right: 13px;
+    border-radius: 3px;
+    font-size: 9pt;
+    width: 110px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
+  }
+  .offBtn {
+    background-color: var(--fontWhite);
+    color:var(--fontThickColor);
+    border:  1px solid var(--lineColor);
+    padding: 10px 20px;
+    margin-right: 12px;
+    border-radius: 3px;
+    font-size: 9pt;
+    width: 110px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
+  }
+.communitySide > button{
+    float: right;
+}
+.subHead{
+    padding-left: 22px;
+}
+.searchLine{
+    display: flex;
+}
+.selectBox{
+        width: 88vw;
+        padding: 12px 24px;
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #575756;
+        background-color: transparent;
+        background-image: url(../source/img/BG.png);
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #575756;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+}
+   select::-ms-expand {
+      display: none;
+   }
+   
+   
