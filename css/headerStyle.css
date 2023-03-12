@@ -1,21 +1,38 @@
+.blackBox{
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  background-color: #0007;
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+}
 header{
   width: 100vw;
   height: 60px;
+  
   background-color: var(--mainGreen);
-  padding: 0 12px;
 }
 header .headerWrapper{
-  width: calc(100% - 24px);
+  width: 100%;
   height: 100%;
 	display: flex;
 	align-items: center;
+}
+header .headerWrapper .title{
+  margin-left: 15px;
 }
 .blank{
 	flex-grow: 1;
 }
 .menuIcon{
+  z-index: 1;
   width: 30px;
   height: 30px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .menuIcon > div{
@@ -27,15 +44,45 @@ header .headerWrapper{
   margin: 6px 0;
 }
 .headerWrapper > ul{
-  width: 90vw;
-  height: 100vh;
-  position: fixed;
+  width: calc(90vw - 40px);
+  height: calc(100vh - 40px);
+
+  position: absolute;
   right: 0;
   top: 0;
-  background-color: aqua;
+  padding: 20px;
+
+  background-color: var(--mainGreen);
+}
+.headerWrapper > ul > li{
+  margin: 20px 0;
+
+}
+.headerWrapper > ul > li:first-child{
+  margin-top: 80px;
+}
+.headerWrapper > ul > li > a{
+  display: inline-block;
+  width: calc(100%);
+  height: 40px;
+  line-height: 40px;
+  color: var(--fontWhite);
+  font-size: 16px;
+  text-align: center;
+  border-radius: 20px;
+  border: solid 1px var(--fontWhite);
+}
+header > .headerWrapper > ul > li > a.select{
+  background-color: #fff;
+  color: var(--mainGreen);
+  font-weight: bold;
+  pointer-events: none;
 }
 /* pc size */
 @media (min-width: 1330px) {
+.blackBox{
+  display: none;
+}
 header{
   width: 100vw;
   height: 90px;
@@ -48,12 +95,16 @@ header .headerWrapper{
 
 	margin: 0 auto;
 }
+header .headerWrapper .title{
+  margin: 0;
+}
 .menuIcon{
   display: none;
 }
 header .headerWrapper ul{
   width: auto;
   height: auto;
+  padding: 0;
   text-align: right;
   position: static;
   background: transparent;
@@ -61,7 +112,9 @@ header .headerWrapper ul{
 header .headerWrapper ul li{
   display: inline-block;
   margin: 0 5px;
-  font-size: 15px;
+}
+header .headerWrapper ul li:first-child{
+  margin: 0;
 }
 header .headerWrapper ul li:last-child{
   margin-right: 0;
@@ -74,6 +127,7 @@ header .headerWrapper ul li a{
 	align-items: center;
   justify-content: center;
   border-radius: 20px;
+  font-size: 15px;
   color: var(--fontNonSetect);
 }
 header .headerWrapper ul li a:hover{
@@ -81,7 +135,7 @@ header .headerWrapper ul li a:hover{
   color: var(--fontWhite);
   font-weight: bold;
 }
-header .headerWrapper ul li a.select{
+header > .headerWrapper > ul > li > a.select{
   background-color: #fff;
   color: var(--mainGreen);
   font-weight: bold;
