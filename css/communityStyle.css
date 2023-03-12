@@ -32,6 +32,7 @@
 }
 .searchLine{
     display: flex;
+    background-color: var(--fontWhite);
 }
 .selectBox{
         width: 88vw;
@@ -56,5 +57,28 @@
    select::-ms-expand {
       display: none;
    }
-   
+.pageNation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pageNation li{
+  list-style: none;
+}
+.pageNation a{
+  display: block;
+  margin: 0 3px;
+  float: left;
+  font-size: 12pt;
+  color: var(--fontThickColor);
+}
+.pageWrap{
+  width: 100vw;
+  text-align: center;
+  font-size: 0;
+}
+tr td {
+  text-align: center;
+}
    

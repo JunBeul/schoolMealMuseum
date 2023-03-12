@@ -1,65 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Script-Type" content="text/javascript" />
-	<meta http-equiv="Content-Style-Type" content="text/css" />
-	<meta http-equiv="Title" content="학교급식 사이버 박물관" />
-	<meta http-equiv="Subject" content="학교급식 사이버 박물관" />
-	<meta http-equiv="Author" content="한국교육환경보호원" />
-	<meta http-equiv="Distribution" content="한국교육환경보호원" />
-	<meta http-equiv="imagetoolbar" content="no" />
-	<meta http-equiv="Cache-Control" content="no-cache" />
-	<meta http-equiv="Pragma" content="no-cache" />
-	<meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
-	<meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Title" content="학교급식 사이버 박물관" />
+  <meta http-equiv="Subject" content="학교급식 사이버 박물관" />
+  <meta http-equiv="Author" content="한국교육환경보호원" />
+  <meta http-equiv="Distribution" content="한국교육환경보호원" />
+  <meta http-equiv="imagetoolbar" content="no" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+  <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
 
-    <link rel="icon" href="./source/icon/favicon.svg">
-    <link rel="mask-icon" href="./source/icon/favicon.svg" color="#000000">
-    <link rel="apple-touch-icon" href="./source/icon/favicon.svg">
+  <link rel="icon" href="./source/icon/favicon.svg">
+  <link rel="mask-icon" href="./source/icon/favicon.svg" color="#000000">
+  <link rel="apple-touch-icon" href="./source/icon/favicon.svg">
 
-    <!-- 외부 스타일 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
-    <!-- 공통 스타일 -->
-	<link rel="stylesheet" href="../css/publicStyle.css">
-    <link rel="stylesheet" href="../css/layoutStyle.css">
-    <!-- 내부 스타일 -->
-    <link rel="stylesheet" href="../css/communityStyle.css">
-    <!-- <link rel="stylesheet" href="../css/templateStyle.css"> -->
+  <!-- 외부 스타일 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../css/publicStyle.css">
+  <link rel="stylesheet" href="../css/layoutStyle.css">
+  <!-- 내부 스타일 -->
+  <link rel="stylesheet" href="../css/communityStyle.css">
+  <!-- <link rel="stylesheet" href="../css/templateStyle.css"> -->
 
-    <title>템플릿</title>
+  <title>템플릿</title>
 </head>
+
 <body class="flexCol">
-    <iframe src="header.html" frameborder="0" class="head"></iframe>
-    <!-- 사이드 -->
-    <section class="side">
-        <div class="sideWrapper communitySide ">
-            <span class="normal subHead flexCenter">커뮤니티</span>
-            <button class="offBtn">공지사항</button>
-            <button class="onBtn">문의사항</button>
+  <iframe src="header.html" frameborder="0" class="head"></iframe>
+  <!-- 사이드 -->
+  <section class="side">
+    <div class="sideWrapper communitySide ">
+      <span class="normal subHead flexCenter">커뮤니티</span>
+      <button class="offBtn">공지사항</button>
+      <button class="onBtn">문의사항</button>
+    </div>
+  </section>
+  <!-- 본문 -->
+  <section class="content flexFullArea">
+    <div class="centerWrapper flexCol">
+      <div class="searchLine flexCenter">
+        <!-- 남조꺼 배낄 것-->
+        <form>
+          <select name="search" class="selectBox">
+            <option value="">제목</option>
+            <option value="">번호</option>
+            <option value="">작성일</option>
+          </select>
+          <select name="search" class="selectBox">
+            <option value="">제목</option>
+            <option value="">번호</option>
+            <option value="">작성일</option>
+          </select>
+        </form>
+      </div>
+      <div>
+        <div>
+          <img src="../source/img/QnA.svg">
         </div>
-    </section>
-    <!-- 본문 -->
-    <section class="content flexFullArea">
-        <div class="centerWrapper flexCol">
-            <div class="searchLine flexCenter">
-                <form>
-                <select name="search" class="selectBox">
-                    <option value="">제목</option>
-                    <option value="">번호</option>
-                    <option value="">작성일</option>
-                </select>
-                <select name="search" class="selectBox">
-                    <option value="">제목</option>
-                    <option value="">번호</option>
-                    <option value="">작성일</option>
-                </select>
-                </form>
-           </div>
+        <div>
+          학교급식 사이버 박물관에 궁금한 점이 있으면
+          언제든지 문의해 주세요!
         </div>
-    </section>
-    <iframe src="footer.html" frameborder="0" class="foot"></iframe>
+        <button class="offBtn">문의하기</button>
+      </div>
+      <table border="1">
+        <th>번호</th>
+        <th>제목</th>
+        <th>작성일</th>
+        <th>답변여부</th>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+      </table>
+      <div class="pageWrap">
+        <ul class="pageNation">
+          <li><a href="#"> 1</a> </li>
+          <li><a href="#"> 2</a> </li>
+          <li><a href="#"> 3</a> </li>
+          <li><a href="#"> 4</a> </li>
+          <li><a href="#"> 5</a> </li>
+          <li><a href="#"> 6</a> </li>
+          <li><a href="#"> 7</a> </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <iframe src="footer.html" frameborder="0" class="foot"></iframe>
 </body>
+
 </html>
