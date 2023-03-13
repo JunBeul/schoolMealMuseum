@@ -6,15 +6,16 @@ body{
   background-size: 140%;
   background-repeat: no-repeat;
 }
-
 .foot {
 	width: 100vw;
 	height: 160px;
 }
+/* 입장 패널 */
 article.enter{
   width: 100vw;
-  height: 500px;
+  height: 400px;
   position: absolute;
+  top: calc(42vw + 60px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,8 +51,6 @@ article.enter > div.boder:nth-child(4){
   border-bottom: 10px solid #fff;
   border-right: 10px solid #fff;
 }
-article.enter > p{
-}
 a.enter{
   width: 75px;
   height: 75px;
@@ -75,6 +74,68 @@ a.enter:hover{
   -webkit-transform-origin: center;
   transform-origin: 50% 49%;
   animation: rotate 2.5s ease-in-out infinite;
+}
+/* 콘텐츠 패널 */
+article.content > .title{
+  height: 30vw;
+  font-size: 14vw;
+  margin: 20px;
+}
+article.content > .text{
+  width: calc(100vw - 60px);
+  height: 12vw;
+  margin: 10px 30px;
+  font-size: 3vw;
+  line-height: 4vw;
+  box-sizing: border-box;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-bottom: 420px;
+}
+/* 네비 */
+nav{
+  margin-top: 20px;
+}
+nav > ul > li{
+  width: 25vw;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav > ul > li > a{
+  width: 80%;
+  max-width: 150px;
+  min-width: 80px;
+  min-height: 150px;
+  aspect-ratio: 1/1;
+  border-radius: 18px;
+  display: inline-block;
+  font-size: 12pt;
+}
+nav > ul > li > a > img{
+  width: 75%;
+  height: 80px;
+}
+nav > ul > li > a > p{
+  width: 80px;
+  height: 44px;
+  padding-top: 10px;
+
+  box-sizing: border-box;
+  border-top: 2px solid #fff;
+  text-align: center;
+}
+nav > ul > li > a:hover{
+  background-color: var(--mainGreen);
+  box-shadow: inset 0 0 10px #2227;
+}
+nav > ul > li > a:hover > p{
+  font-weight: 800;
+  color: var(--fontWhite);
 }
 @keyframes rotate {
   50% { /* 애니메이션 종료 시점 */
