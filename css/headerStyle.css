@@ -1,41 +1,118 @@
+/* 전체 화면 가리는거 */
+.blackBox{
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+  visibility: hidden;
+  background-color: #0007;
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+}
+/* 헤더 사이즈 */
 header{
   width: 100vw;
   height: 60px;
+  
   background-color: var(--mainGreen);
-  padding: 0 12px;
 }
-header .headerWrapper{
-  width: calc(100% - 24px);
+header > .headerWrapper{
+  width: 100%;
   height: 100%;
+
 	display: flex;
 	align-items: center;
 }
+/* 타이틀 */
+header > .headerWrapper .title{
+  margin-left: 15px;
+}
+/* 빈공간 */
 .blank{
 	flex-grow: 1;
 }
+/* 메뉴 아이콘 */
 .menuIcon{
+  z-index: 1;
+
   width: 30px;
   height: 30px;
+  margin-right: 10px;
+
   cursor: pointer;
 }
 .menuIcon > div{
   width: 30px;
   height: 6px;
+  
   background-color: #fff;
+  border-radius: 1px;
 }
 .menuIcon > div:nth-child(2){
   margin: 6px 0;
 }
-.headerWrapper > ul{
-  width: 90vw;
-  height: 100vh;
-  position: fixed;
-  right: 0;
+.closeIcon{
+  transform: rotate(-180deg);
+}
+.closeIcon div:first-child{
+  width: 20px;
+  transform: translate(-1px, 5px) rotate(-45deg);
+}
+.closeIcon div:last-child{
+  width: 20px;
+  transform: translate(-1px, -5px) rotate(45deg);
+}
+/* 네비게이션 */
+header > .headerWrapper > ul{
+  width: calc(90vw - 40px);
+  height: calc(100vh - 40px);
+
+  position: absolute;
+  right: -90vw;
   top: 0;
-  background-color: aqua;
+  padding: 20px;
+
+  visibility: hidden;
+  background-color: var(--mainGreen);
+}
+header > .headerWrapper > ul > li{
+  margin: 20px 0;
+
+}
+header > .headerWrapper > ul > li:first-child{
+  margin-top: 80px;
+}
+header > .headerWrapper > ul > li > a{
+  width: 100%;
+  height: 40px;
+  
+  display: inline-block;
+  color: var(--fontWhite);
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  border: solid 1px var(--fontWhite);
+}
+header > .headerWrapper > ul > li > a:hover{
+  background-color: #fff5;
+  color: var(--fontThickColor);
+  font-weight: bold;
+}
+header > .headerWrapper > ul > li > a.select{
+  background-color: #fff;
+  color: var(--mainGreen);
+  font-weight: bold;
+  pointer-events: none;
 }
 /* pc size */
 @media (min-width: 1330px) {
+.blackBox{
+  visibility: hidden;
+}
 header{
   width: 100vw;
   height: 90px;
@@ -48,12 +125,20 @@ header .headerWrapper{
 
 	margin: 0 auto;
 }
+header .headerWrapper .title{
+  margin: 0;
+}
 .menuIcon{
-  display: none;
+  visibility: hidden;
 }
 header .headerWrapper ul{
   width: auto;
   height: auto;
+
+  padding: 0;
+
+  visibility: visible;
+  display: block;
   text-align: right;
   position: static;
   background: transparent;
@@ -61,30 +146,29 @@ header .headerWrapper ul{
 header .headerWrapper ul li{
   display: inline-block;
   margin: 0 5px;
-  font-size: 15px;
+}
+header .headerWrapper ul li:first-child{
+  margin: 0;
 }
 header .headerWrapper ul li:last-child{
   margin-right: 0;
 }
 header .headerWrapper ul li a{
-  box-sizing: border-box;
   width: 160px;
   height: 40px;
+  
+  box-sizing: border-box;
 	display: flex;
 	align-items: center;
   justify-content: center;
+  border: none;
   border-radius: 20px;
+  font-size: 15px;
   color: var(--fontNonSetect);
 }
 header .headerWrapper ul li a:hover{
   border: 1px solid #fff;
   color: var(--fontWhite);
   font-weight: bold;
-}
-header .headerWrapper ul li a.select{
-  background-color: #fff;
-  color: var(--mainGreen);
-  font-weight: bold;
-  pointer-events: none;
 }
 }
