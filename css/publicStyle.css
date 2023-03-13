@@ -41,7 +41,7 @@
 /** 전체 기본값 */
 body{
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'NanumSquare', sans-serif;
     color: var(--fontThickColor);
 }
